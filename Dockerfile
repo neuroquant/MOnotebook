@@ -19,9 +19,10 @@ RUN pip install octave_kernel  && \
 
 USER root
 
-RUN python -m octave_kernel.install
+#RUN python -m octave_kernel.install
+RUN conda install -c conda-forge oct2py
 
-# Copy repo into ${HOME}, make user own $HOME
-COPY . ${HOME}
-RUN chown -R ${NB_USER} ${HOME}
-USER ${NB_USER}
+# # Copy repo into ${HOME}, make user own $HOME
+# COPY . ${HOME}
+# RUN chown -R ${NB_USER} ${HOME}
+# USER ${NB_USER}
