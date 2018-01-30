@@ -2,12 +2,15 @@ FROM jupyter/scipy-notebook
 
 USER root
 
-# Install latest stable octave version and gnuplot
+# Install latest stable octave version
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
                   software-properties-common \
                   python-software-properties && \
-    add-apt-repository ppa:octave/stable && \
+    add-apt-repository ppa:octave/stable
+
+# Install octave and gnuplot
+RUN apt-get update && \
     apt-get install -y --no-install-recommends \
                   libgraphicsmagick++1-dev \
                   libhdf5-serial-dev \
@@ -28,3 +31,4 @@ USER root
 #RUN python -m octave_kernel.install
 RUN conda install -c conda-forge oct2py
 
+USER $NB_USER
