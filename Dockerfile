@@ -7,10 +7,8 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
                   software-properties-common \
                   python-software-properties && \
-    add-apt-repository ppa:octave/stable
-
-# Install octave and gnuplot
-RUN apt-get update && \
+    add-apt-repository ppa:octave/stable && \
+    apt-get update && \
     apt-get install -y --no-install-recommends \
                   libgraphicsmagick++1-dev \
                   libhdf5-serial-dev \
