@@ -9,12 +9,12 @@ RUN apt-get update && \
                   python-software-properties && \
     add-apt-repository ppa:octave/stable && \
     apt-get update && \
-    apt-get install -y --no-install-recommends \
+    apt-get install -f -y --no-install-recommends \
                   libgraphicsmagick++1-dev \
                   libhdf5-serial-dev \
-                  octave \
+                  octave liboctave3 liboctave-dev \
                   octave-general octave-struct octave-control octave-image octave-io octave-optim octave-signal \
-                  octave-statistics octave-nan octave-communications octave-parallel liboctave-dev \
+                  octave-statistics octave-nan octave-communications octave-parallel \
                   gnuplot-x11 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
