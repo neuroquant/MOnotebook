@@ -3,6 +3,7 @@ FROM jupyter/scipy-notebook
 USER root
 
 # Get latest stable octave version
+RUN apt-get install software-properties-common python-software-properties
 RUN add-apt-repository ppa:octave/stable
 
 # Install octave and gnuplot
