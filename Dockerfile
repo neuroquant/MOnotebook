@@ -2,12 +2,12 @@ FROM jupyter/scipy-notebook
 
 USER root
 
-# Get latest stable octave version
-RUN apt-get install software-properties-common python-software-properties
-RUN add-apt-repository ppa:octave/stable
-
-# Install octave and gnuplot
+# Install latest stable octave version and gnuplot
 RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+                  software-properties-common \
+                  python-software-properties && \
+    add-apt-repository ppa:octave/stable && \
     apt-get install -y --no-install-recommends \
                   libgraphicsmagick++1-dev \
                   libhdf5-serial-dev \
