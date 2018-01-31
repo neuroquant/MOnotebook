@@ -13,8 +13,8 @@ RUN apt-get update && \
                   libgraphicsmagick++1-dev \
                   libhdf5-serial-dev \
                   octave liboctave-dev \
-                  octave-general octave-struct octave-control octave-image octave-io octave-optim octave-signal \
-                  octave-statistics octave-nan octave-communications octave-parallel \
+                  octave-general octave-struct octave-control octave-image octave-signal \
+                  octave-statistics octave-communications octave-parallel \
                   gnuplot-x11 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
