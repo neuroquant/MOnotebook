@@ -12,7 +12,7 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
                   libgraphicsmagick++1-dev \
                   libhdf5-serial-dev \
-                  octave=4.2.1 liboctave-dev \
+                  octave=4.2.2 liboctave-dev \
                   octave-general octave-struct octave-control octave-image octave-signal \
                   octave-statistics octave-communications octave-parallel \
                   gnuplot-x11 && \
